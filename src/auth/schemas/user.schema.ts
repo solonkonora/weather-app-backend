@@ -5,12 +5,13 @@ import { Document } from 'mongoose';
   timestamps: true,
 })
 export class User extends Document {
-  @Prop()
-  name: string;
+  @Prop({ unique: true, required: true })
+  username: string;
 
   @Prop({ unique: [true, 'Duplicate email entered'] })
   email: string;
 
+  @Prop({ unique: true, required: true })
   @Prop()
   password: string;
 }
