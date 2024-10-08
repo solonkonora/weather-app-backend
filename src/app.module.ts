@@ -4,7 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
-import { WeatherSearchHistoryModule } from './weather-search-history/weather-search-history.module';
+import { WeatherSearchHistoryModule } from './weather/weather-search-history.module';
 
 @Module({
   imports: [
