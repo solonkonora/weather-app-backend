@@ -4,6 +4,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
+import { WeatherSearchHistoryModule } from './weather-search-history/weather-search-history.module';
 
 @Module({
   imports: [
@@ -13,6 +14,7 @@ import { AuthModule } from './auth/auth.module';
     }),
     MongooseModule.forRoot(process.env.MONGO_CONNECT_URL),
     AuthModule,
+    WeatherSearchHistoryModule,
   ],
   controllers: [AppController],
   providers: [AppService],

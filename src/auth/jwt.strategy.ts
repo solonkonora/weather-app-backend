@@ -1,3 +1,6 @@
+//this file defines how the JWT token is validated and how the user is authenticated, 
+//handles the actual validation logic.
+
 import { Injectable, UnauthorizedException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { PassportStrategy } from '@nestjs/passport';
