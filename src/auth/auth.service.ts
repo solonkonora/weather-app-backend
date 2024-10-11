@@ -32,9 +32,7 @@ export class AuthService {
         email,
         password: hashedPassword,
       });
-  
-      // console.log("Created User:", user); // Log created user
-  
+    
       const token = this.jwtService.sign({ id: user._id });
   
       return { token }; // Return token
@@ -45,7 +43,7 @@ export class AuthService {
   }
 
   async login(loginDto: LoginDto): Promise<{ token: string }> {
-    console.log('Login attempt with data:', loginDto); // Log the login attempt
+    // console.log('Login attempt with data:', loginDto); // Log the login attempt
 
     const { email, password } = loginDto;
 
